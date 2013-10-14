@@ -16,7 +16,7 @@ linReg <- function(trainX, trainY){
 	w
 }
 
-# set up a simulation.
+# set up simulation.
 testLinReg <- function(N, is.in=T, plot=F){
 	# initialize data and f line
 	sampleX <- matrix(runif(2*N, -1, 1), N, 2)
@@ -44,7 +44,7 @@ testLinReg <- function(N, is.in=T, plot=F){
 	return(error)
 }
 
-iterLinReg <- function(N, iter, is.in=T){
+iterLinReg <- function(N, is.in=T, iter){
 	errorSet <- vector()
 	for( i in 1:iter ){
 		error <- testLinReg(N, is.in)
